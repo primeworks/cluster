@@ -1,0 +1,1 @@
+curl -fL https://cattle.webdiscode.com/system-agent-install.sh | sudo  sh -s - --server https://cattle.webdiscode.com --label 'cattle.io/os=linux' --token hpj5zm9szmrcntdd5cqzgtm8lkqdq8xhgcf4g9hbpk6mr477wn6bkf --etcd --controlplane --worker
