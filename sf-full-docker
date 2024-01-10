@@ -1,3 +1,4 @@
 #!/bin/bash -e
 
-sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run  rancher/rancher-agent:v2.8.0 --server https://cattle.webdiscode.com --token g4jlnkcsrf4v4pfv6q44j6pstgjwt5xb6mkrgmfzmftbc8gd4745z6 --etcd --controlplane --worker
+curl https://releases.rancher.com/install-docker/19.03.sh | sh
+&& sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run  rancher/rancher-agent:v2.8.0 --server https://cattle.webdiscode.com --token g4jlnkcsrf4v4pfv6q44j6pstgjwt5xb6mkrgmfzmftbc8gd4745z6 --etcd --controlplane --worker
